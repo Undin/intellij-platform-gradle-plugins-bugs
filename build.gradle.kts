@@ -8,7 +8,7 @@ import java.util.zip.ZipOutputStream
 
 plugins {
     kotlin("jvm") version "1.9.23"
-    id("org.jetbrains.intellij.platform") version "2.0.0-beta3"
+    id("org.jetbrains.intellij.platform") version "2.0.0-SNAPSHOT"
 }
 
 group = "org.example"
@@ -31,7 +31,7 @@ intellijPlatform {
         version = project.version.toString()
     }
 
-  instrumentCode = false
+    instrumentCode = false
 }
 
 
@@ -46,10 +46,9 @@ dependencies {
             "org.jetbrains.plugins.gradle",
             "com.intellij.gradle"
         )
+
+        pluginModule(implementation(project(":module")))
     }
-
-    implementation(project(":module"))
-
     testImplementation(kotlin("test"))
 }
 
@@ -58,7 +57,7 @@ tasks {
         val projectName = project.the<IntelliJPlatformExtension>().projectName
         doLast {
             val libraryDir = destinationDir.resolve("${projectName.get()}/lib")
-            mergePluginJars(libraryDir, projectName.get())
+//            mergePluginJars(libraryDir, projectName.get())
         }
     }
 }
