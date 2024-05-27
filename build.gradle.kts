@@ -32,6 +32,7 @@ intellijPlatform {
     }
 
     instrumentCode = false
+    buildSearchableOptions = false
 }
 
 
@@ -65,6 +66,18 @@ tasks {
 project(":module") {
     apply {
         plugin("org.jetbrains.intellij.platform.module")
+    }
+
+    repositories {
+        mavenCentral()
+
+        intellijPlatform {
+            defaultRepositories()
+        }
+    }
+
+    intellijPlatform {
+        instrumentCode = false
     }
 
     dependencies {
