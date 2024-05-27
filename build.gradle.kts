@@ -62,6 +62,25 @@ tasks {
     }
 }
 
+project(":module") {
+    apply {
+        plugin("org.jetbrains.intellij.platform.module")
+    }
+
+    dependencies {
+        intellijPlatform {
+            intellijIdeaUltimate("2024.1")
+
+            bundledPlugins(
+                "com.intellij.java",
+                "JUnit",
+                "org.jetbrains.plugins.gradle",
+                "com.intellij.gradle"
+            )
+        }
+    }
+}
+
 fun mergePluginJars(pluginLibDir: File, baseArchiveName: String) {
     val pluginJars = pluginLibDir.listFiles().orEmpty().filter { it.isPluginJar() }
     val finalJarName = "$baseArchiveName-${version}.jar"
