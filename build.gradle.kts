@@ -49,6 +49,7 @@ dependencies {
         )
 
         pluginModule(implementation(project(":module")))
+        pluginModule(implementation(project(":module2")))
     }
     testImplementation(kotlin("test"))
 }
@@ -64,6 +65,38 @@ tasks {
 }
 
 project(":module") {
+    apply {
+        plugin("org.jetbrains.intellij.platform.module")
+    }
+
+    repositories {
+        mavenCentral()
+
+        intellijPlatform {
+            defaultRepositories()
+        }
+    }
+
+    intellijPlatform {
+        instrumentCode = false
+    }
+
+    dependencies {
+        intellijPlatform {
+            intellijIdeaUltimate("2024.1")
+
+            bundledPlugins(
+                "com.intellij.java",
+                "JUnit",
+                "org.jetbrains.plugins.gradle",
+                "com.intellij.gradle"
+            )
+        }
+        implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.14.3")
+    }
+}
+
+project(":module2") {
     apply {
         plugin("org.jetbrains.intellij.platform.module")
     }

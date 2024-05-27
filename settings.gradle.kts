@@ -11,3 +11,4 @@ plugins {
 rootProject.name = "intellij-platform-gradle-plugins-bugs"
 
 include("module")
+include("module2")

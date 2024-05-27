@@ -2,6 +2,7 @@
 <idea-plugin package="org.jetbrains.intellij.platform.example">
     <content>
         <module name="module"/>
+        <module name="module2"/>
     </content>
 
     <actions>
