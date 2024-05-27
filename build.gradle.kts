@@ -11,6 +11,7 @@ repositories {
 
     intellijPlatform {
         defaultRepositories()
+        jetbrainsRuntime()
     }
 }
 
@@ -29,6 +30,14 @@ intellijPlatform {
 dependencies {
     intellijPlatform {
         intellijIdeaUltimate("2024.1")
+        jetbrainsRuntime()
+
+        bundledPlugins(
+            "com.intellij.java",
+            "JUnit",
+            "org.jetbrains.plugins.gradle",
+            "com.intellij.gradle"
+        )
     }
     testImplementation(kotlin("test"))
 }
