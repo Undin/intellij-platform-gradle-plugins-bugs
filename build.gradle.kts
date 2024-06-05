@@ -1,4 +1,5 @@
 import groovy.xml.XmlParser
+import org.jetbrains.intellij.platform.gradle.TestFrameworkType
 import org.jetbrains.intellij.platform.gradle.extensions.IntelliJPlatformExtension
 import org.jetbrains.intellij.platform.gradle.tasks.PrepareSandboxTask
 import java.io.File
@@ -40,6 +41,8 @@ dependencies {
     intellijPlatform {
         intellijIdeaUltimate("2024.1")
         jetbrainsRuntime()
+
+        testFramework(TestFrameworkType.Platform.Bundled)
 
         bundledPlugins(
             "com.intellij.java",
@@ -92,6 +95,8 @@ project(":module") {
                 "org.jetbrains.plugins.gradle",
                 "com.intellij.gradle"
             )
+
+            testFramework(TestFrameworkType.Platform.Bundled)
         }
         implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.14.3")
     }
@@ -125,6 +130,8 @@ project(":module2") {
                 "org.jetbrains.plugins.gradle",
                 "com.intellij.gradle"
             )
+
+            testFramework(TestFrameworkType.Platform.Bundled)
         }
         implementation(project(":module"))
         implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.14.3")
