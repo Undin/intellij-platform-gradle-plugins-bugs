@@ -8,7 +8,7 @@ import java.util.zip.ZipOutputStream
 
 plugins {
     kotlin("jvm") version "1.9.23"
-    id("org.jetbrains.intellij.platform") version "2.0.0-SNAPSHOT"
+    id("org.jetbrains.intellij.platform") version "2.0.0-beta5"
 }
 
 group = "org.example"
