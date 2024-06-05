@@ -66,6 +66,7 @@ tasks {
 
 project(":module") {
     apply {
+        plugin("kotlin")
         plugin("org.jetbrains.intellij.platform.module")
     }
 
@@ -98,6 +99,7 @@ project(":module") {
 
 project(":module2") {
     apply {
+        plugin("kotlin")
         plugin("org.jetbrains.intellij.platform.module")
     }
 
