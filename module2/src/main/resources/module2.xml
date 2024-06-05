@@ -2,7 +2,7 @@
 <idea-plugin package="org.jetbrains.intellij.platform.example.module2">
     <actions>
         <action id="ModuleExampleAction2"
-                class="org.jetbrains.intellij.platform.example.module2.ModuleExampleAction"
+                class="org.jetbrains.intellij.platform.example.module2.ModuleExampleAction2"
                 text="Module Example Action 2"/>
 
     </actions>

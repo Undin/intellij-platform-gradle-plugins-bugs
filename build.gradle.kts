@@ -126,6 +126,7 @@ project(":module2") {
                 "com.intellij.gradle"
             )
         }
+        implementation(project(":module"))
         implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.14.3")
     }
 }
