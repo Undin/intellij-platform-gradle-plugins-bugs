@@ -11,6 +11,7 @@ repositories {
 
     intellijPlatform {
         defaultRepositories()
+        binaryReleasesAndroidStudio()
         jetbrainsRuntime()
     }
 }
@@ -29,8 +30,7 @@ intellijPlatform {
 
 dependencies {
     intellijPlatform {
-        intellijIdeaUltimate("2024.1")
-        jetbrainsRuntime()
+        androidStudio("2023.3.1.19")
 
         bundledPlugins(
             "com.intellij.java",
