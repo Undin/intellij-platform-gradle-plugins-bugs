@@ -32,12 +32,12 @@ dependencies {
     intellijPlatform {
         androidStudio("2023.3.1.19")
 
-        bundledPlugins(
-            "com.intellij.java",
-            "JUnit",
-            "org.jetbrains.plugins.gradle",
-            "com.intellij.gradle"
-        )
+//        bundledPlugins(
+//            "com.intellij.java",
+//            "JUnit",
+//            "org.jetbrains.plugins.gradle",
+//            "com.intellij.gradle"
+//        )
     }
     testImplementation(kotlin("test"))
 }
