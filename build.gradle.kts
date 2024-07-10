@@ -10,7 +10,11 @@ repositories {
     mavenCentral()
 
     intellijPlatform {
-        defaultRepositories()
+        localPlatformArtifacts()
+        intellijDependencies()
+        releases()
+        snapshots()
+        marketplace()
         jetbrainsRuntime()
     }
 }
