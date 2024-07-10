@@ -45,3 +45,9 @@ dependencies {
     }
     testImplementation(kotlin("test"))
 }
+
+intellijPlatformTesting.runIde.register("CustomRunIde") {
+    plugins {
+        plugin("com.jetbrains.rust:241.27890.34")
+    }
+}
