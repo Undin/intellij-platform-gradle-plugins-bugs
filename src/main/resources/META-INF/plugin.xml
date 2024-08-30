@@ -1,5 +1,9 @@
 <!--suppress PluginXmlValidity -->
-<idea-plugin>
+<idea-plugin package="org.jetbrains.intellij.platform.example">
+    <content>
+        <module name="module"/>
+    </content>
+
     <actions>
         <action id="ExampleAction"
                 class="org.jetbrains.intellij.platform.example.ExampleAction"
