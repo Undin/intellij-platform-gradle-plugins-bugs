@@ -1,6 +1,6 @@
 plugins {
     kotlin("jvm") version "1.9.23"
-    id("org.jetbrains.intellij.platform") version "2.0.0-beta8"
+    id("org.jetbrains.intellij.platform") version "2.0.1"
 }
 
 group = "org.example"
@@ -10,11 +10,7 @@ repositories {
     mavenCentral()
 
     intellijPlatform {
-        localPlatformArtifacts()
-        intellijDependencies()
-        releases()
-        snapshots()
-        marketplace()
+        defaultRepositories()
         jetbrainsRuntime()
     }
 }
@@ -33,7 +29,7 @@ intellijPlatform {
 
 dependencies {
     intellijPlatform {
-        intellijIdeaUltimate("2024.1")
+        intellijIdeaUltimate("2024.1", useInstaller = false)
         jetbrainsRuntime()
 
         bundledPlugins(
