@@ -29,7 +29,7 @@ intellijPlatform {
 
 dependencies {
     intellijPlatform {
-        intellijIdeaUltimate("2024.1", useInstaller = false)
+        intellijIdeaUltimate("2024.2", useInstaller = false)
         jetbrainsRuntime()
 
         bundledPlugins(
