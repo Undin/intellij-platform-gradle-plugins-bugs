@@ -28,16 +28,10 @@ intellijPlatform {
 
 
 dependencies {
+    implementation("com.github.ajalt.clikt:clikt-core:5.0.0")
     intellijPlatform {
-        intellijIdeaUltimate("2024.2", useInstaller = false)
+        clion("2024.2", useInstaller = false)
         jetbrainsRuntime()
-
-        bundledPlugins(
-            "com.intellij.java",
-            "JUnit",
-            "org.jetbrains.plugins.gradle",
-            "com.intellij.gradle"
-        )
     }
     testImplementation(kotlin("test"))
 }
