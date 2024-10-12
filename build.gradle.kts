@@ -1,3 +1,5 @@
+import org.jetbrains.intellij.platform.gradle.TestFrameworkType
+
 plugins {
     kotlin("jvm") version "1.9.23"
     id("org.jetbrains.intellij.platform") version "2.1.0"
@@ -38,6 +40,10 @@ dependencies {
             "org.jetbrains.plugins.gradle",
             "com.intellij.gradle"
         )
+        bundledPlugin("com.intellij.database")
+
+        testFramework(TestFrameworkType.Bundled)
     }
     testImplementation(kotlin("test"))
+    testImplementation("org.opentest4j:opentest4j:1.3.0")
 }
