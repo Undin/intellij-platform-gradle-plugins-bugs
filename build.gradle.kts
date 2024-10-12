@@ -41,6 +41,7 @@ dependencies {
             "com.intellij.gradle"
         )
         bundledPlugin("com.intellij.database")
+        bundledPlugin("intellij.charts")
 
         testFramework(TestFrameworkType.Bundled)
     }
