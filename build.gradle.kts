@@ -29,7 +29,7 @@ intellijPlatform {
 
 dependencies {
     intellijPlatform {
-        intellijIdeaUltimate("2024.2", useInstaller = false)
+        androidStudio("2024.2.1.11")
         jetbrainsRuntime()
 
         bundledPlugins(
