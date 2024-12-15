@@ -1,3 +1,5 @@
+import org.jetbrains.intellij.platform.gradle.Constants.Configurations
+
 plugins {
     kotlin("jvm") version "1.9.23"
     id("org.jetbrains.intellij.platform") version "2.2.1"
@@ -41,4 +43,10 @@ dependencies {
         )
     }
     testImplementation(kotlin("test"))
+}
+
+configurations {
+    intellijPlatformBundledModules {
+        exclude(Configurations.Dependencies.BUNDLED_MODULE_GROUP, "com.jetbrains.performancePlugin")
+    }
 }
