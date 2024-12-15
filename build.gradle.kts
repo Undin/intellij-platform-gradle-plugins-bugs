@@ -29,14 +29,15 @@ intellijPlatform {
 
 dependencies {
     intellijPlatform {
-        intellijIdeaUltimate("2024.2", useInstaller = false)
+        androidStudio("2024.2.1.11")
         jetbrainsRuntime()
 
         bundledPlugins(
             "com.intellij.java",
             "JUnit",
             "org.jetbrains.plugins.gradle",
-            "com.intellij.gradle"
+            "com.intellij.gradle",
+            "org.jetbrains.android"
         )
     }
     testImplementation(kotlin("test"))
