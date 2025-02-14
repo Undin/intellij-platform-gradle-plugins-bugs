@@ -1,6 +1,6 @@
 plugins {
     kotlin("jvm") version "1.9.23"
-    id("org.jetbrains.intellij.platform") version "2.2.1"
+    id("org.jetbrains.intellij.platform") version "2.1.0"
 }
 
 group = "org.example"
@@ -29,14 +29,12 @@ intellijPlatform {
 
 dependencies {
     intellijPlatform {
-        intellijIdeaUltimate("2024.2", useInstaller = false)
+        clion("2024.3", useInstaller = false)
         jetbrainsRuntime()
 
         bundledPlugins(
-            "com.intellij.java",
-            "JUnit",
-            "org.jetbrains.plugins.gradle",
-            "com.intellij.gradle"
+            "org.jetbrains.plugins.clion.radler",
+            "com.intellij.clion",
         )
     }
     testImplementation(kotlin("test"))

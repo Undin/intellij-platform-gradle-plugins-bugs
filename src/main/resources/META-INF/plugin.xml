@@ -1,5 +1,10 @@
 <!--suppress PluginXmlValidity -->
 <idea-plugin>
+    <dependencies>
+        <plugin id="com.intellij.clion"/>
+        <plugin id="org.jetbrains.plugins.clion.radler"/>
+    </dependencies>
+
     <actions>
         <action id="ExampleAction"
                 class="org.jetbrains.intellij.platform.example.ExampleAction"
