@@ -29,15 +29,8 @@ intellijPlatform {
 
 dependencies {
     intellijPlatform {
-        intellijIdeaUltimate("2025.1", useInstaller = false)
+        clion("252.21735-EAP-CANDIDATE-SNAPSHOT", useInstaller = false)
         jetbrainsRuntime()
-
-        bundledPlugins(
-            "com.intellij.java",
-            "JUnit",
-            "org.jetbrains.plugins.gradle",
-            "com.intellij.gradle"
-        )
     }
     testImplementation(kotlin("test"))
 }
