@@ -31,6 +31,8 @@ dependencies {
     intellijPlatform {
         clion("252.21735-EAP-CANDIDATE-SNAPSHOT", useInstaller = false)
         jetbrainsRuntime()
+
+        bundledPlugin("com.intellij.clion")
     }
     testImplementation(kotlin("test"))
 }
