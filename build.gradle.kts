@@ -1,6 +1,6 @@
 plugins {
-    kotlin("jvm") version "2.1.20"
-    id("org.jetbrains.intellij.platform") version "2.6.0"
+    kotlin("jvm") version "2.4.0"
+    id("org.jetbrains.intellij.platform") version "2.17.0"
 }
 
 group = "org.example"
@@ -29,7 +29,9 @@ intellijPlatform {
 
 dependencies {
     intellijPlatform {
-        intellijIdeaUltimate("2025.1", useInstaller = false)
+        intellijIdeaUltimate("2025.1") {
+            useInstaller = false
+        }
         jetbrainsRuntime()
 
         bundledPlugins(
