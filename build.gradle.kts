@@ -29,7 +29,7 @@ intellijPlatform {
 
 dependencies {
     intellijPlatform {
-        intellijIdeaUltimate("2025.1") {
+        intellijIdeaUltimate("2026.1.4") {
             useInstaller = false
         }
         jetbrainsRuntime()
